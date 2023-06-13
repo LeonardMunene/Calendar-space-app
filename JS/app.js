@@ -36,3 +36,16 @@ function showSuccessMessage() {
   successMessage.textContent = 'Form submitted successfully!';
   document.querySelector('form').appendChild(successMessage);
 }
+
+
+// Card Section Animations
+const cardItem = document.getElementById('card-item');
+
+cardItem.addEventListener('mouseover', function () {
+  cardItem.style.transform = 'scale(1.1)';
+});
+
+cardItem.addEventListener('mouseout', function () {
+  cardItem.style.transform = 'scale(1)';
+});
+

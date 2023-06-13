@@ -210,10 +210,16 @@ a{
 
 /* Card-section */
 
+#feature-section h2{
+  text-align: center;
+  font-weight: var(--fw-bold);
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
+  margin-top: 30px;
 }
 
 .card-item {
@@ -222,9 +228,26 @@ a{
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #f2f2f2;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
 }
+
+.card-item img{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-item:hover {
+  transform: scale(1.05);
+  transform-origin: center bottom;
+  z-index: 2;
+}
+
+
 
 @media (max-width: 767px) {
   .card-container {
